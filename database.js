@@ -1,16 +1,21 @@
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb+srv://raygulshan960:sanjukumar@express.ndxrkkr.mongodb.net/?retryWrites=true&w=majority').then(()=>{
-    console.log('connect successfully')
-}).catch((error)=>{console.log(error)})
+mongoose.connect('mongodb+srv://raygulshan960:sanjukumar@express.ndxrkkr.mongodb.net/?retryWrites=true&w=majority', { useNewUrlParser: true, useUnifiedTopology: true, serverSelectionTimeoutMS: 30000 })
+    .then(() => {
+        console.log('Connected successfully');
+    })
+    .catch((error) => {
+        console.error('Connection error:', error);
+    });
 
-Schema = mongoose.Schema({
-    name:String,
+const Schema = mongoose.Schema({
+    name: String,
     mail: String,
-    age:Number
-})
-console.log('schema created')
+    age: Number
+});
 
+console.log('Schema created');
 
-StudentModel = mongoose.model('student',Schema)
-module.exports =StudentModel
+const StudentModel = mongoose.model('student', Schema);
+
+module.exports = StudentModel;
