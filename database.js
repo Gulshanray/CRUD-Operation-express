@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb://localhost:27017/ibm', { useNewUrlParser: true, connectTimeoutMS: 30000 }).then(()=>{
+mongoose.connect('mongodb://localhost:27017/ibm');.then(()=>{
     console.log('connect successfully')
 }).catch((error)=>{console.log(error)})
 
