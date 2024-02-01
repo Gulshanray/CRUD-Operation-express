@@ -2,11 +2,11 @@ const mongoose = require('mongoose');
 
 const connectDB = async () => {
   try {
-    await mongoose.connect('mongodb://localhost:27017/gulshan', {
-      useFindAndModify: false,
+    await mongoose.connect('mongodb://localhost:27017/ibm', {
+      
       useNewUrlParser: true,
       useUnifiedTopology: true,
-      useCreateIndex: true,
+    
     });
     console.log('Connected to the database successfully');
   } catch (error) {
