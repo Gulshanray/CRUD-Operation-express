@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 const connectDB = async () => {
   try {
-    await mongoose.connect('mongodb://127.0.0.1:27017/ibm', {
+    await mongoose.connect('mongodb+srv://raygulshan960:sanjukumar@express.ndxrkkr.mongodb.net/?retryWrites=true&w=majority', {
       // Use the new URL parser
       useNewUrlParser: true,
       // Use the new server discovery and monitoring engine
