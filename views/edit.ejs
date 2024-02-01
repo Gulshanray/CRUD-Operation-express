@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Page</title>
+    <style>
+      body {
+    font-family: Arial, sans-serif;
+    background-color: #ecf0f1; /* Updated background color */
+    text-align: center;
+    margin: 50px;
+}
+
+form {
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: #ffffff; /* White background */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+input {
+    width: 100%;
+    padding: 12px; /* Increased padding for better spacing */
+    margin: 10px 0; /* Adjusted margin for better spacing */
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 6px; /* Slightly increased border radius */
+}
+
+button {
+    background-color: #2ecc71; /* Updated button color */
+    color: white;
+    padding: 12px 20px; /* Adjusted padding for better button size */
+    margin: 10px 0;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+    </style>
+</head>
+<body>
+    <!-- <form method="post" action="/edit/<%= students._id %>">
+        
+        <h2>Update</h2>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required value="<%= students.name %>">
+    
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required value="<%= students.mail %>">
+    
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" required value="<%= students.age %>">
+    
+        <button type="submit">Update</button>
+    </form> -->
+
+
+    <!-- EJS template for edit.ejs -->
+<form method="post" action="/edit/<%= student._id %>">
+    
+    <h2> Student Update our Details</h2>
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required value="<%= student.name %>">
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required value="<%= student.mail %>">
+
+    <label for="age">Age:</label>
+    <input type="number" id="age" name="age" required value="<%= student.age %>">
+
+    <button type="submit">Update</button>
+</form>
+
+</body>
+</html>
